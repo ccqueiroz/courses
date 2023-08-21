@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
+import coursesJson from './data/courses.json';
 import './App.css';
+import { Grid } from './components/listing/Grid';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          React Testing and Debugging
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="navbar-fixed">
+          <nav className="blue">
+            <div className="nav-wrapper">
+              <a href="/" className="brand-logo center">Courses</a>
+            </div>
+          </nav>
+        </div>
+      <div>
+        <Grid items={coursesJson}/>
+      </div>
     </div>
   );
 }
