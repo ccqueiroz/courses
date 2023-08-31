@@ -43,6 +43,6 @@
 #### A diferença entre curvas quadráticas e de Bezier, é que nas curvas quadráticas possuem um ponto de início, um ponto final e apenas um ponto de controle para curva. Enquanto que a curva de Bezier usam dois pontos de controle de curva.
 
 - Curva Quadrática:
-    - O método quadraticCurveTo(posX, posY, posX1ControleCurva, posY1ControleCurva) define a posição inicial e final da curva e as posições de Controle de curva, irão definir o final da linha, assim, gerando o cálculo do arredondamento.
+    - O método quadraticCurveTo(posX1ControleCurva, posY1ControleCurva, posFinalX, posFinalY) define as posições X, Y finais e as posições de Controle de curva. A posição inicial da curva será o cursor assim, gerando o cálculo do arredondamento.
 - Curva Bezier:
-    - O método bezierCurveTo(posX, posY, posX1ControleCurva, posY1ControleCurva, posX2ControleCurva, posY2ControleCurva) define a posição inicial e final da curva e as posições de Controle de curva, irão definir o final da linha, assim, gerando o cálculo do arredondamento.
+    - O método bezierCurveTo(posX1ControleCurva, posY1ControleCurva, posX2ControleCurva, posY2ControleCurva, posFinalX, posFinalY) define as posições X, Y finais e as posições de Controle de curva. A posição inicial da curva será o cursor assim, gerando o cálculo do arredondamento.
