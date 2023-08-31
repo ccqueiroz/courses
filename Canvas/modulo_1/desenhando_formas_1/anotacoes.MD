@@ -13,6 +13,7 @@
 - Define espessura da linha de contorno = lineWidth = '6';
 - Define contorno = strokeRect(posX, posY, lar, alt);
 - Define cor do contorno = strokeStyle = 'red';
+- Método clearRect(posX, posY, width, height) serve para apagar uma área específica do canvas.
 
 ### Para desenhar uma forma geométrica, primeiro define-se as propriedades e posteriormente chama o método de desenho.
 
@@ -38,3 +39,10 @@
 - O acabamento da linha 'round', é feito acabamento arredondado entre as duas linhas;
 - O acabamento da linha 'bevel', é feito acabamento reto entre as duas linhas;
 
+## Desenhando curvas quadráticas e curvas cúbicas de Bezier
+#### A diferença entre curvas quadráticas e de Bezier, é que nas curvas quadráticas possuem um ponto de início, um ponto final e apenas um ponto de controle para curva. Enquanto que a curva de Bezier usam dois pontos de controle de curva.
+
+- Curva Quadrática:
+    - O método quadraticCurveTo(posX, posY, posX1ControleCurva, posY1ControleCurva) define a posição inicial e final da curva e as posições de Controle de curva, irão definir o final da linha, assim, gerando o cálculo do arredondamento.
+- Curva Bezier:
+    - O método bezierCurveTo(posX, posY, posX1ControleCurva, posY1ControleCurva, posX2ControleCurva, posY2ControleCurva) define a posição inicial e final da curva e as posições de Controle de curva, irão definir o final da linha, assim, gerando o cálculo do arredondamento.
