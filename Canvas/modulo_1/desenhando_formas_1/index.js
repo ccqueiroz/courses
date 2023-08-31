@@ -143,6 +143,33 @@ const coracao = () => {
     ctx.stroke();
 }
 
+const desenhoNuvem = (ctx, x, y, scale) => {
+    ctx.fillStyle = "#FFFFFF"; // Branco
+    ctx.beginPath();
+    ctx.arc(x, y, 30 * scale, 0, 2 * Math.PI);
+    ctx.arc(x + 25 * scale, y, 40 * scale, 0, 2 * Math.PI);
+    ctx.arc(x + 60 * scale, y, 30 * scale, 0, 2 * Math.PI);
+    ctx.arc(x + 35 * scale, y - 20 * scale, 25 * scale, 0, 2 * Math.PI);
+    ctx.arc(x + 50 * scale, y - 20 * scale, 35 * scale, 0, 2 * Math.PI);
+    ctx.fill();
+}
+
+const blueSky = () => {
+    const ctx = canvas.getContext('2d');
+    // céu azul
+    ctx.fillStyle = "#87CEEB";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    // sol
+    ctx.fillStyle = "#FFD700";
+    ctx.beginPath();
+    ctx.arc(100, 100, 50, 0, 2 * Math.PI);
+    ctx.fill();
+
+    desenhoNuvem(ctx, 200, 50, 0.5);
+    desenhoNuvem(ctx, 400, 80, 0.7);
+    desenhoNuvem(ctx, 600, 120, 0.6);
+}
+
 const main = () => {
     if (canvas.getContext) {
         grid();
@@ -158,7 +185,8 @@ const main = () => {
 
         // curvas();
         // balao();
-        coracao();
+        // coracao();
+        blueSky();
     } else {
         console.log('Navegador sem suporte ao canvas')
     }
