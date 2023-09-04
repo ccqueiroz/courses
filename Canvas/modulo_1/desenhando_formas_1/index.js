@@ -156,7 +156,7 @@ const desenhoNuvem = (ctx, x, y, scale) => {
 
 const blueSky = () => {
     const ctx = canvas.getContext('2d');
-    // céu azul
+    //céu azul
     ctx.fillStyle = "#87CEEB";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     // sol
